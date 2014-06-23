@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dialog id="dlgSettings" title="THT settings" buttons="accept,cancel">
+    <script>
+        function selectFlashPath()
+        {
+            var path = fl.browseForFolderURL('Select the Flash folder of the game');
+            if (path != undefined)
+            {
+                path = FLfile.uriToPlatformPath(path);
+                fl.trace("New flash path: " + path);
+                fl.xmlui.set("txtFlashPath", path);
+            }
+        }
+
+        function selectGamePath()
+        {
+            var path = fl.browseForFileURL('select', "Select the importer's .exe file");
+            if (path != undefined)
+            {
+                path = FLfile.uriToPlatformPath(path);
+                fl.trace("New importer path: " + path);
+                fl.xmlui.set("txtGamePath", path);
+            }
+        }
+    </script>
+<!-- <vbox> -->
+    <label value="Game's Flash folder:" />
+    <hbox>
+        <textbox id="txtFlashPath" maxlength="200" multiline="false" value="%FlashPath%" tabindex="1" size="12" literal="false" width="256" />
+        <button id="btnFlashPath" label="..." width="24" oncommand="selectFlashPath();"/>
+    </hbox>
+    <label value="Importer's Execute file:" />
+    <hbox>
+        <textbox id="txtGamePath" maxlength="200" multiline="false" value="%GamePath%" tabindex="2" size="12" literal="false" width="256" />
+        <button id="btnGamePath" label="..." width="24" oncommand="selectGamePath();"/>
+    </hbox>
+    <label value="Perforce workspace:" />
+    <hbox>
+        <textbox id="txtP4Client" maxlength="200" multiline="false" value="%P4Client%" tabindex="3" size="12" literal="false" width="256" />
+    </hbox>
+    <label value="Perforce User:" />
+    <hbox>
+        <textbox id="txtP4User" maxlength="200" multiline="false" value="%P4User%" tabindex="4" size="12" literal="false" width="256" />
+    </hbox>
+    <label value="Profile name:" />
+    <hbox>
+        <textbox id="txtProfileName" maxlength="200" multiline="false" value="%ProfileName%" tabindex="5" size="12" literal="false" width="256" />
+    </hbox>
+<!-- </vbox> -->
+</dialog>

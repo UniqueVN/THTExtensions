@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<macromedia-extension
+	 name="THT Extensions"
+	 version="0.0.1"
+	 type="other"
+	 requires-restart="true">
+
+	<author name="Thang Hong To" />
+	<copyright name="Thang Hong To" />
+
+	<products>
+		<product name="Flash" version="11" primary="true" />
+	</products>
+
+	<description>
+	<![CDATA[
+	THT Extensions: collections of command and tools that help UI developer save time when working with Flash/Scaleform on project with multiple files
+	]]>
+	</description>
+
+	<ui-access>
+	<![CDATA[
+<b>THT Extensions</b><br>
+<br>
+TODO
+<br>
+	]]>
+	</ui-access>
+
+	<license-agreement>
+	<![CDATA[
+	
+	]]>
+	</license-agreement>
+
+	<files>			
+		<!-- install resources -->
+		<file name="jsfl\THTExt.jsfl" destination="$flash/THTExt/jsfl" />
+		<file name="jsfl\Update Symbols.jsfl" destination="$flash/THTExt/jsfl" />
+		<file name="jsfl\Validate Symbols.jsfl" destination="$flash/THTExt/jsfl" />
+		<file name="xmlPanel\settings.xml" destination="$flash/THTExt/xmlPanel" />
+		<file name="settings.txt" destination="$flash/THTExt" />
+		<file name="panel\THTExtPanel.swf" destination="$flash/WindowSWF" />	
+	</files>
+
+</macromedia-extension>
